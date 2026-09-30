@@ -1,6 +1,52 @@
-html,
-body,
-#root {
-    height: 100%;
-    margin: 0;
+body {
+  margin: 0;
+  width: 700px;
+  height: 300px;
+  position: relative;
+  font-family: sans-serif;
+}
+
+body, h1, h2, ol, li, a {
+  color: transparent;
+  font-size: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body::before,
+body::after,
+h1::before,
+h2::before,
+ol::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #DAA520;
+}
+
+body::before {
+  top: 0;
+  left: 0;  
+}
+
+h1::before {
+  top: 100px;
+  left: 150px;
+}
+
+ol::before {
+  top: 200px;
+  left: 300px;
+}
+
+h2::before {
+  top: 100px;
+  left: 450px;
+}
+
+body::after {
+  top: 0;
+  left: 600px;
 }
