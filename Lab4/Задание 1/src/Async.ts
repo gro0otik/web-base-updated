@@ -15,10 +15,9 @@ export async function getData(): Promise<number[]> {
     return results;
 }
 
-export async function catchException(): Promise<string> {
+export async function catchException(): Promise<string | undefined> {
     try {
         await Promise.reject(new Error('my error'));
-        return ''; // Нужно для TypeScript
     } catch (err: any) {
         return err.message;
     }
